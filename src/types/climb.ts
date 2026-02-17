@@ -42,6 +42,7 @@ export type ClimbCategory = "HC" | "1" | "2" | "3" | "4" | "Uncategorized";
 export const CLIMB_COLORS = [
   "#3b82f6", "#ef4444", "#22c55e", "#f59e0b", "#a855f7",
   "#ec4899", "#06b6d4", "#f97316", "#84cc16", "#6366f1",
+  "#14b8a6", "#e11d48",
 ];
 
 export const GRADIENT_ZONES = [
