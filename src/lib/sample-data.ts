@@ -4,6 +4,7 @@ import { calculateStats } from "./difficulty";
 
 // ── Real GPX data (from Strava exports) ────────────────────────────
 import altoElNogoli from "@/data/alto-el-nogoli.json";
+import elAmago from "@/data/el-amago.json";
 
 interface ClimbProfile {
   name: string;
@@ -128,6 +129,7 @@ const EUROPE_PROFILES: ClimbProfile[] = [
 
 const GPX_CLIMBS: { name: string; points: ClimbPoint[] }[] = [
   altoElNogoli as { name: string; points: ClimbPoint[] },
+  elAmago as { name: string; points: ClimbPoint[] },
 ];
 
 const PROFILES: ClimbProfile[] = [...EUROPE_PROFILES];
