@@ -194,6 +194,29 @@ const ARGENTINA_PROFILES: ClimbProfile[] = [
     bearing: 350,
   },
   {
+    // Alto El Nogolí - San Luis
+    // Continuación desde El Nogolí hacia el alto, rampas más duras
+    // ~8 km desde ~1,450m hasta ~1,950m, tramos de hasta 12%
+    name: "Alto El Nogolí (San Luis)",
+    distanceKm: 8.0,
+    startElevation: 1450,
+    segments: [
+      { fraction: 0.10, gradient: 7.0 },
+      { fraction: 0.10, gradient: 8.5 },
+      { fraction: 0.10, gradient: 10.0 },
+      { fraction: 0.10, gradient: 11.5 },
+      { fraction: 0.10, gradient: 9.0 },
+      { fraction: 0.10, gradient: 7.5 },
+      { fraction: 0.10, gradient: 5.0 },
+      { fraction: 0.10, gradient: 4.5 },
+      { fraction: 0.10, gradient: 3.0 },
+      { fraction: 0.10, gradient: 2.5 },
+    ],
+    lat: -33.2833,
+    lon: -66.3333,
+    bearing: 340,
+  },
+  {
     // El Amago - San Luis
     // Subida al embalse El Amago por la RP39
     // ~10 km desde ~800m hasta ~1,350m, tramos empinados
