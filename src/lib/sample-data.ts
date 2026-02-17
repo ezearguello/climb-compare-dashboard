@@ -148,74 +148,96 @@ const ARGENTINA_PROFILES: ClimbProfile[] = [
     bearing: 290,
   },
   {
-    // Abra del Acay - Salta
-    // Punto más alto de la Ruta 40: 4,895m
-    // Subida larga y tendida desde San Antonio de los Cobres (~3,775m)
-    name: "Abra del Acay (Salta, RN40)",
-    distanceKm: 28.0,
-    startElevation: 3775,
+    // Cuesta de Lipán - Jujuy
+    // Ruta 52 hacia Salinas Grandes, de ~2,300m a ~4,170m
+    // ~18 km con curvas cerradas y paisaje lunar
+    name: "Cuesta de Lipán (Jujuy)",
+    distanceKm: 18.0,
+    startElevation: 2300,
     segments: [
-      { fraction: 0.10, gradient: 3.5 },
-      { fraction: 0.10, gradient: 4.0 },
-      { fraction: 0.10, gradient: 3.8 },
-      { fraction: 0.10, gradient: 4.5 },
-      { fraction: 0.10, gradient: 4.0 },
-      { fraction: 0.10, gradient: 4.2 },
-      { fraction: 0.10, gradient: 3.5 },
-      { fraction: 0.10, gradient: 5.0 },
-      { fraction: 0.10, gradient: 4.5 },
-      { fraction: 0.10, gradient: 3.0 },
-    ],
-    lat: -24.3961,
-    lon: -66.1917,
-    bearing: 0,
-  },
-  {
-    // Cuesta del Obispo - Salta
-    // Desde Chicoana (~1,500m) hasta Piedra del Molino (~3,348m)
-    // ~20 km de subida con curvas espectaculares
-    name: "Cuesta del Obispo (Salta)",
-    distanceKm: 20.0,
-    startElevation: 1500,
-    segments: [
-      { fraction: 0.10, gradient: 5.5 },
       { fraction: 0.10, gradient: 7.0 },
       { fraction: 0.10, gradient: 8.5 },
       { fraction: 0.10, gradient: 9.0 },
-      { fraction: 0.10, gradient: 10.0 },
+      { fraction: 0.10, gradient: 10.5 },
+      { fraction: 0.10, gradient: 11.0 },
+      { fraction: 0.10, gradient: 12.0 },
+      { fraction: 0.10, gradient: 10.5 },
       { fraction: 0.10, gradient: 11.5 },
-      { fraction: 0.10, gradient: 10.0 },
-      { fraction: 0.10, gradient: 9.5 },
-      { fraction: 0.10, gradient: 8.0 },
-      { fraction: 0.10, gradient: 7.0 },
+      { fraction: 0.10, gradient: 9.0 },
+      { fraction: 0.10, gradient: 7.5 },
     ],
-    lat: -25.1667,
-    lon: -65.8333,
-    bearing: 315,
+    lat: -23.6500,
+    lon: -65.9500,
+    bearing: 310,
   },
   {
-    // Los Caracoles - Mendoza
-    // Las famosas curvas de la Ruta 7 hacia el Cristo Redentor
-    // Desde Uspallata (~1,900m) hasta Las Cuevas (~3,200m), ~65km
-    // Acá tomamos el tramo final de caracoles: Puente del Inca a Las Cuevas ~15km
-    name: "Los Caracoles, Ruta 7 (Mendoza)",
-    distanceKm: 15.0,
-    startElevation: 2720,
+    // El Nogolí - San Luis
+    // Subida serrana desde la ciudad de San Luis (~730m) a ~1,450m
+    // ~14 km por RP9, sinuosa entre sierras
+    name: "El Nogolí (San Luis)",
+    distanceKm: 14.0,
+    startElevation: 730,
     segments: [
-      { fraction: 0.10, gradient: 4.0 },
-      { fraction: 0.10, gradient: 3.5 },
       { fraction: 0.10, gradient: 4.5 },
+      { fraction: 0.10, gradient: 5.5 },
+      { fraction: 0.10, gradient: 6.0 },
+      { fraction: 0.10, gradient: 7.5 },
       { fraction: 0.10, gradient: 5.0 },
-      { fraction: 0.10, gradient: 3.0 },
+      { fraction: 0.10, gradient: 4.0 },
+      { fraction: 0.10, gradient: 6.0 },
+      { fraction: 0.10, gradient: 5.5 },
       { fraction: 0.10, gradient: 4.0 },
       { fraction: 0.10, gradient: 3.5 },
-      { fraction: 0.10, gradient: 2.5 },
-      { fraction: 0.10, gradient: 3.0 },
-      { fraction: 0.10, gradient: 2.0 },
     ],
-    lat: -32.8258,
-    lon: -69.9100,
-    bearing: 270,
+    lat: -33.3333,
+    lon: -66.3167,
+    bearing: 350,
+  },
+  {
+    // El Amago - San Luis
+    // Subida al embalse El Amago por la RP39
+    // ~10 km desde ~800m hasta ~1,350m, tramos empinados
+    name: "El Amago (San Luis)",
+    distanceKm: 10.0,
+    startElevation: 800,
+    segments: [
+      { fraction: 0.10, gradient: 5.0 },
+      { fraction: 0.10, gradient: 6.5 },
+      { fraction: 0.10, gradient: 7.0 },
+      { fraction: 0.10, gradient: 5.5 },
+      { fraction: 0.10, gradient: 4.5 },
+      { fraction: 0.10, gradient: 6.0 },
+      { fraction: 0.10, gradient: 5.0 },
+      { fraction: 0.10, gradient: 6.5 },
+      { fraction: 0.10, gradient: 5.0 },
+      { fraction: 0.10, gradient: 4.0 },
+    ],
+    lat: -33.2667,
+    lon: -66.2000,
+    bearing: 320,
+  },
+  {
+    // Mirador del Sol - San Luis
+    // Circuito serrano con subida al mirador panorámico
+    // ~7 km desde ~750m hasta ~1,200m, rampas fuertes
+    name: "Mirador del Sol (San Luis)",
+    distanceKm: 7.0,
+    startElevation: 750,
+    segments: [
+      { fraction: 0.10, gradient: 6.0 },
+      { fraction: 0.10, gradient: 8.0 },
+      { fraction: 0.10, gradient: 9.5 },
+      { fraction: 0.10, gradient: 7.5 },
+      { fraction: 0.10, gradient: 6.0 },
+      { fraction: 0.10, gradient: 7.0 },
+      { fraction: 0.10, gradient: 5.5 },
+      { fraction: 0.10, gradient: 6.5 },
+      { fraction: 0.10, gradient: 5.0 },
+      { fraction: 0.10, gradient: 4.0 },
+    ],
+    lat: -33.3000,
+    lon: -66.3500,
+    bearing: 280,
   },
   {
     // Paso de Agua Negra - San Juan
@@ -263,29 +285,6 @@ const ARGENTINA_PROFILES: ClimbProfile[] = [
     lat: -29.3833,
     lon: -67.7500,
     bearing: 200,
-  },
-  {
-    // Alto de la Ventana - Sierra de la Ventana, Buenos Aires
-    // Subida al Cerro de la Ventana por RP76
-    // ~8km desde la base (~280m) hasta ~1,100m
-    name: "Alto de la Ventana (Buenos Aires)",
-    distanceKm: 8.0,
-    startElevation: 280,
-    segments: [
-      { fraction: 0.10, gradient: 7.0 },
-      { fraction: 0.10, gradient: 8.5 },
-      { fraction: 0.10, gradient: 10.0 },
-      { fraction: 0.10, gradient: 12.0 },
-      { fraction: 0.10, gradient: 13.5 },
-      { fraction: 0.10, gradient: 11.0 },
-      { fraction: 0.10, gradient: 10.0 },
-      { fraction: 0.10, gradient: 12.5 },
-      { fraction: 0.10, gradient: 9.0 },
-      { fraction: 0.10, gradient: 8.0 },
-    ],
-    lat: -38.0833,
-    lon: -61.7833,
-    bearing: 0,
   },
 ];
 
