@@ -2,6 +2,9 @@ import { Climb, ClimbPoint, CLIMB_COLORS } from "@/types/climb";
 import { smoothGradients } from "./gradient-calc";
 import { calculateStats } from "./difficulty";
 
+// ── Real GPX data (from Strava exports) ────────────────────────────
+import altoElNogoli from "@/data/alto-el-nogoli.json";
+
 interface ClimbProfile {
   name: string;
   distanceKm: number;
@@ -121,12 +124,13 @@ const EUROPE_PROFILES: ClimbProfile[] = [
   },
 ];
 
-// ── Puertos Argentinos (placeholder - se reemplazarán con datos reales de GPX) ──
-// Los GPX de Strava se hardcodearán acá cuando estén disponibles
+// ── Puertos Argentinos (datos reales de GPX de Strava) ──────────────
 
-const ARGENTINA_PROFILES: ClimbProfile[] = [];
+const GPX_CLIMBS: { name: string; points: ClimbPoint[] }[] = [
+  altoElNogoli as { name: string; points: ClimbPoint[] },
+];
 
-const PROFILES: ClimbProfile[] = [...ARGENTINA_PROFILES, ...EUROPE_PROFILES];
+const PROFILES: ClimbProfile[] = [...EUROPE_PROFILES];
 
 function generatePoints(profile: ClimbProfile): ClimbPoint[] {
   const totalDist = profile.distanceKm * 1000;
@@ -178,17 +182,32 @@ function generatePoints(profile: ClimbProfile): ClimbPoint[] {
 }
 
 export function generateSampleClimbs(): Climb[] {
-  return PROFILES.map((profile, index) => {
-    const rawPoints = generatePoints(profile);
-    const points = smoothGradients(rawPoints, 100);
+  // Real GPX climbs first
+  const realClimbs: Climb[] = GPX_CLIMBS.map((gpx, index) => {
+    const points = smoothGradients(gpx.points, 100);
     const stats = calculateStats(points);
-
     return {
-      id: `sample-${index}`,
-      name: profile.name,
+      id: `gpx-${index}`,
+      name: gpx.name,
       color: CLIMB_COLORS[index % CLIMB_COLORS.length],
       points,
       stats,
     };
   });
+
+  // Then synthetic European classics
+  const syntheticClimbs: Climb[] = PROFILES.map((profile, index) => {
+    const rawPoints = generatePoints(profile);
+    const points = smoothGradients(rawPoints, 100);
+    const stats = calculateStats(points);
+    return {
+      id: `sample-${index}`,
+      name: profile.name,
+      color: CLIMB_COLORS[(realClimbs.length + index) % CLIMB_COLORS.length],
+      points,
+      stats,
+    };
+  });
+
+  return [...realClimbs, ...syntheticClimbs];
 }
